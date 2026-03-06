@@ -1,0 +1,114 @@
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.officer-complaint-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.task-list-item {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+}
+
+.task-list-item:hover {
+    border-color: var(--color-border-hover);
+    background-color: var(--color-surface-hover);
+}
+
+.task-list-item.active {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-light);
+    box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.task-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+}
+
+.metadata-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.meta-label {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.meta-value {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background-color: var(--color-border);
+}
+
+.timeline-item {
+    position: relative;
+    background-color: white;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-indicator {
+    position: absolute;
+    top: 1.25rem;
+    left: -1.35rem;
+    /* center on the line */
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    border: 2px solid var(--color-surface);
+}

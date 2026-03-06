@@ -1,0 +1,82 @@
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.dashboard-grid-admin {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .dashboard-grid-admin {
+        grid-template-columns: 1fr;
+    }
+}
+
+.metric-card {
+    transition: transform var(--transition-fast);
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.metric-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-indigo-100 {
+    background-color: var(--color-primary-light);
+}
+
+.text-indigo-600 {
+    color: var(--color-primary);
+}
+
+.bg-emerald-100 {
+    background-color: var(--color-success-light);
+}
+
+.text-emerald-600 {
+    color: var(--color-success);
+}
+
+.bg-amber-100 {
+    background-color: var(--color-warning-light);
+}
+
+.text-amber-600 {
+    color: var(--color-warning);
+}
+
+.bg-slate-100 {
+    background-color: var(--color-border);
+}
+
+.text-slate-600 {
+    color: var(--color-secondary-light);
+}
+
+.progress-bar-container {
+    height: 6px;
+    width: 100%;
+    background-color: var(--color-border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1s ease-in-out;
+}

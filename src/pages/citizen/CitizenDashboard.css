@@ -1,0 +1,59 @@
+.dashboard-container {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: var(--color-surface);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.complaints-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.complaint-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.complaint-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+}
+
+.new-complaint-card {
+    max-width: 600px;
+}
