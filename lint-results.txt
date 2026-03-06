@@ -1,0 +1,36 @@
+﻿
+> public-complaint@0.0.0 lint
+> eslint .
+
+
+C:\Users\AMAN KUMAR SAHU\Desktop\publiccomplaint\src\components\ui\Input\Input.jsx
+  13:27  error  React Hook "React.useId" is called conditionally. React Hooks must be called in the exact same order in every component render  react-hooks/rules-of-hooks
+  45:28  error  React Hook "React.useId" is called conditionally. React Hooks must be called in the exact same order in every component render  react-hooks/rules-of-hooks
+
+C:\Users\AMAN KUMAR SAHU\Desktop\publiccomplaint\src\context\AuthContext.jsx
+   6:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     react-refresh/only-export-components
+  17:17  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  15 |         if (savedUser) {
+  16 |             try {
+> 17 |                 setCurrentUser(JSON.parse(savedUser));
+     |                 ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  18 |             } catch (e) {
+  19 |                 console.error("Failed to parse user session", e);
+  20 |             }  react-hooks/set-state-in-effect
+  30:18  error  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  56:18  error  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+
+C:\Users\AMAN KUMAR SAHU\Desktop\publiccomplaint\src\context\ComplaintContext.jsx
+   6:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  18:26  error  'e' is defined but never used                                                                                                   no-unused-vars
+  38:27  error  'location' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                        no-unused-vars
+
+Γ£û 9 problems (9 errors, 0 warnings)
+
